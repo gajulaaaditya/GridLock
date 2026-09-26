@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Sequence
 
 from .contract import export_contract, validate_payload
+from .ingestion.documents import IngestionError, ingest_plans
 from .settings.loader import ConfigError, load_settings
 
 
@@ -28,6 +29,8 @@ def build_parser() -> argparse.ArgumentParser:
     contract_parser = commands.add_parser("contract", help="export or validate the API contract")
     contract_parser.add_argument("action", choices=["export", "validate"])
     contract_parser.add_argument("payload", type=Path, nargs="?")
+    ingest_parser = commands.add_parser("ingest", help="ingest configured public sources")
+    ingest_parser.add_argument("source", choices=["plans"])
     return parser
 
 
@@ -57,6 +60,15 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"Contract validation error: {error}")
             return 2
         print(f"Valid: {args.payload}")
+        return 0
+    if args.command == "ingest" and args.source == "plans":
+        try:
+            bundle = load_settings(args.config)
+            report = ingest_plans(bundle, Path(__file__).resolve().parents[3])
+        except (ConfigError, IngestionError) as error:
+            print(f"Ingestion error: {error}")
+            return 2
+        print(json.dumps(report.as_dict(), indent=2, sort_keys=True))
         return 0
     return 2
 

@@ -46,6 +46,7 @@ export interface Project {
   utility: UtilityId;
   projectName: string;
   projectType: ProjectType;
+  sponsor?: string | null;
   description?: string | null;
   voltageKv?: Array<number>;
   endpoints?: Array<Endpoint>;

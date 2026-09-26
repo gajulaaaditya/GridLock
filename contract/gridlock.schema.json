@@ -350,6 +350,18 @@
         "source": {
           "$ref": "#/$defs/SourceRef"
         },
+        "sponsor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sponsor"
+        },
         "status": {
           "anyOf": [
             {

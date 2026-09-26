@@ -91,6 +91,12 @@ class SourceConfig(BaseModel):
     id: str
     parser: str
     path: str
+    page_start: int | None = Field(default=None, ge=1)
+    page_end: int | None = Field(default=None, ge=1)
+    summary_page_start: int | None = Field(default=None, ge=1)
+    summary_page_end: int | None = Field(default=None, ge=1)
+    detail_page_start: int | None = Field(default=None, ge=1)
+    detail_page_end: int | None = Field(default=None, ge=1)
 
 
 class UtilityConfig(BaseModel):

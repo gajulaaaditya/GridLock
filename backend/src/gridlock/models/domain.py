@@ -122,6 +122,7 @@ class Project(ContractModel):
     utility: UtilityId
     project_name: str = Field(min_length=1)
     project_type: ProjectType
+    sponsor: str | None = None
     description: str | None = None
     voltage_kv: list[int] = Field(default_factory=list)
     endpoints: list[Endpoint] = Field(default_factory=list)

@@ -1,0 +1,672 @@
+{
+  "$defs": {
+    "Bounds": {
+      "properties": {
+        "east": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "East",
+          "type": "number"
+        },
+        "north": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "North",
+          "type": "number"
+        },
+        "south": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "South",
+          "type": "number"
+        },
+        "west": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "West",
+          "type": "number"
+        }
+      },
+      "required": [
+        "west",
+        "south",
+        "east",
+        "north"
+      ],
+      "title": "Bounds",
+      "type": "object"
+    },
+    "ConstructionWindow": {
+      "properties": {
+        "endDate": {
+          "format": "date",
+          "title": "Enddate",
+          "type": "string"
+        },
+        "startDate": {
+          "format": "date",
+          "title": "Startdate",
+          "type": "string"
+        }
+      },
+      "required": [
+        "startDate",
+        "endDate"
+      ],
+      "title": "ConstructionWindow",
+      "type": "object"
+    },
+    "Endpoint": {
+      "properties": {
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "role": {
+          "$ref": "#/$defs/EndpointRole",
+          "default": "unknown"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "Endpoint",
+      "type": "object"
+    },
+    "EndpointRole": {
+      "enum": [
+        "from",
+        "to",
+        "single",
+        "unknown"
+      ],
+      "title": "EndpointRole",
+      "type": "string"
+    },
+    "Evidence": {
+      "properties": {
+        "level": {
+          "$ref": "#/$defs/EvidenceLevel"
+        },
+        "reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reasons",
+          "type": "array"
+        },
+        "score": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Score",
+          "type": "integer"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "level",
+        "score"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "EvidenceLevel": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW",
+        "UNRESOLVED"
+      ],
+      "title": "EvidenceLevel",
+      "type": "string"
+    },
+    "GeometryMethod": {
+      "enum": [
+        "verified_full_line",
+        "verified_endpoints_straight_line",
+        "verified_endpoint_route",
+        "verified_single_endpoint",
+        "approximate_area_centroid",
+        "human_verified_override",
+        "unresolved"
+      ],
+      "title": "GeometryMethod",
+      "type": "string"
+    },
+    "GeometryResolution": {
+      "properties": {
+        "featureIds": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Featureids",
+          "type": "array"
+        },
+        "isApproximation": {
+          "title": "Isapproximation",
+          "type": "boolean"
+        },
+        "method": {
+          "$ref": "#/$defs/GeometryMethod"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "method",
+        "isApproximation"
+      ],
+      "title": "GeometryResolution",
+      "type": "object"
+    },
+    "Metadata": {
+      "properties": {
+        "distanceUnit": {
+          "default": "km",
+          "title": "Distanceunit",
+          "type": "string"
+        },
+        "fixture": {
+          "default": false,
+          "title": "Fixture",
+          "type": "boolean"
+        },
+        "schemaVersion": {
+          "default": "1.0",
+          "title": "Schemaversion",
+          "type": "string"
+        },
+        "thresholdsKm": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Thresholdskm",
+          "type": "object"
+        },
+        "utilityColors": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Utilitycolors",
+          "type": "object"
+        }
+      },
+      "required": [
+        "thresholdsKm",
+        "utilityColors"
+      ],
+      "title": "Metadata",
+      "type": "object"
+    },
+    "Point": {
+      "properties": {
+        "lat": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "Lat",
+          "type": "number"
+        },
+        "lon": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "Lon",
+          "type": "number"
+        }
+      },
+      "required": [
+        "lat",
+        "lon"
+      ],
+      "title": "Point",
+      "type": "object"
+    },
+    "Priority": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ],
+      "title": "Priority",
+      "type": "string"
+    },
+    "Project": {
+      "properties": {
+        "constructionWindow": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ConstructionWindow"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "endpoints": {
+          "items": {
+            "$ref": "#/$defs/Endpoint"
+          },
+          "title": "Endpoints",
+          "type": "array"
+        },
+        "estimatedCostUsd": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Estimatedcostusd"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Evidence"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "geometry": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Geometry"
+        },
+        "geometryResolution": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/GeometryResolution"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "plannedInServiceDate": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Plannedinservicedate"
+        },
+        "projectName": {
+          "minLength": 1,
+          "title": "Projectname",
+          "type": "string"
+        },
+        "projectType": {
+          "$ref": "#/$defs/ProjectType"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceRef"
+        },
+        "status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status"
+        },
+        "utility": {
+          "$ref": "#/$defs/UtilityId"
+        },
+        "voltageKv": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Voltagekv",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "utility",
+        "projectName",
+        "projectType",
+        "source"
+      ],
+      "title": "Project",
+      "type": "object"
+    },
+    "ProjectType": {
+      "enum": [
+        "transmission_line",
+        "substation",
+        "reactor",
+        "other"
+      ],
+      "title": "ProjectType",
+      "type": "string"
+    },
+    "Relationship": {
+      "properties": {
+        "closestPoints": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "$ref": "#/$defs/Point"
+            },
+            {
+              "$ref": "#/$defs/Point"
+            }
+          ],
+          "title": "Closestpoints",
+          "type": "array"
+        },
+        "coordinationPlaybook": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Coordinationplaybook",
+          "type": "array"
+        },
+        "distanceKm": {
+          "minimum": 0,
+          "title": "Distancekm",
+          "type": "number"
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "opportunityPriority": {
+          "$ref": "#/$defs/Priority"
+        },
+        "projectA": {
+          "minLength": 1,
+          "title": "Projecta",
+          "type": "string"
+        },
+        "projectB": {
+          "minLength": 1,
+          "title": "Projectb",
+          "type": "string"
+        },
+        "spatialTier": {
+          "$ref": "#/$defs/SpatialTier"
+        },
+        "timeline": {
+          "$ref": "#/$defs/Timeline"
+        }
+      },
+      "required": [
+        "id",
+        "projectA",
+        "projectB",
+        "distanceKm",
+        "closestPoints",
+        "spatialTier",
+        "timeline",
+        "opportunityPriority",
+        "evidence"
+      ],
+      "title": "Relationship",
+      "type": "object"
+    },
+    "SourceRef": {
+      "properties": {
+        "document": {
+          "minLength": 1,
+          "title": "Document",
+          "type": "string"
+        },
+        "page": {
+          "minimum": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "projectIdRaw": {
+          "minLength": 1,
+          "title": "Projectidraw",
+          "type": "string"
+        },
+        "rawText": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rawtext"
+        }
+      },
+      "required": [
+        "document",
+        "projectIdRaw",
+        "page"
+      ],
+      "title": "SourceRef",
+      "type": "object"
+    },
+    "SpatialTier": {
+      "enum": [
+        "CROSSING",
+        "SITE_LOGISTICS",
+        "REGIONAL_COORDINATION"
+      ],
+      "title": "SpatialTier",
+      "type": "string"
+    },
+    "Timeline": {
+      "properties": {
+        "gapDays": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Gapdays"
+        },
+        "isdWithinFiledSpan": {
+          "default": false,
+          "title": "Isdwithinfiledspan",
+          "type": "boolean"
+        },
+        "relevance": {
+          "$ref": "#/$defs/TimelineRelevance"
+        },
+        "type": {
+          "$ref": "#/$defs/TimelineType"
+        }
+      },
+      "required": [
+        "type",
+        "relevance"
+      ],
+      "title": "Timeline",
+      "type": "object"
+    },
+    "TimelineRelevance": {
+      "enum": [
+        "IMMEDIATE",
+        "MEANINGFUL",
+        "WATCH",
+        "UNKNOWN"
+      ],
+      "title": "TimelineRelevance",
+      "type": "string"
+    },
+    "TimelineType": {
+      "enum": [
+        "IN_SERVICE_GAP",
+        "WINDOW_OVERLAP",
+        "UNRESOLVED"
+      ],
+      "title": "TimelineType",
+      "type": "string"
+    },
+    "UtilityId": {
+      "enum": [
+        "DESC",
+        "GPC"
+      ],
+      "title": "UtilityId",
+      "type": "string"
+    },
+    "Zone": {
+      "properties": {
+        "bounds": {
+          "$ref": "#/$defs/Bounds"
+        },
+        "closestDistanceKm": {
+          "minimum": 0,
+          "title": "Closestdistancekm",
+          "type": "number"
+        },
+        "coordinationThemes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Coordinationthemes",
+          "type": "array"
+        },
+        "evidenceLevel": {
+          "$ref": "#/$defs/EvidenceLevel"
+        },
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "opportunityPriority": {
+          "$ref": "#/$defs/Priority"
+        },
+        "projectIds": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Projectids",
+          "type": "array"
+        },
+        "relationshipIds": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Relationshipids",
+          "type": "array"
+        },
+        "utilities": {
+          "items": {
+            "$ref": "#/$defs/UtilityId"
+          },
+          "title": "Utilities",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "closestDistanceKm",
+        "opportunityPriority",
+        "evidenceLevel",
+        "bounds"
+      ],
+      "title": "Zone",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "metadata": {
+      "$ref": "#/$defs/Metadata"
+    },
+    "projects": {
+      "items": {
+        "$ref": "#/$defs/Project"
+      },
+      "title": "Projects",
+      "type": "array"
+    },
+    "relationships": {
+      "items": {
+        "$ref": "#/$defs/Relationship"
+      },
+      "title": "Relationships",
+      "type": "array"
+    },
+    "zones": {
+      "items": {
+        "$ref": "#/$defs/Zone"
+      },
+      "title": "Zones",
+      "type": "array"
+    }
+  },
+  "required": [
+    "metadata"
+  ],
+  "title": "Payload",
+  "type": "object"
+}

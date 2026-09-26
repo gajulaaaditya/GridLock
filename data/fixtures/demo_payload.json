@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "fixture": true,
+    "distanceUnit": "km",
+    "thresholdsKm": {
+      "near": 1.6,
+      "local": 8.0,
+      "maximum": 40.0
+    },
+    "utilityColors": {
+      "DESC": "#1976D2",
+      "GPC": "#F9A825"
+    }
+  },
+  "projects": [
+    {
+      "id": "DESC-06367-D-G",
+      "utility": "DESC",
+      "projectName": "Jasper – Okatie 230 kV #2: Construct",
+      "projectType": "transmission_line",
+      "voltageKv": [230],
+      "endpoints": [
+        {"name": "Jasper", "role": "from"},
+        {"name": "Okatie", "role": "to"}
+      ],
+      "plannedInServiceDate": "2025-12-31",
+      "estimatedCostUsd": 23787423,
+      "source": {
+        "document": "2024-2028-2million-and-above-project-descriptions.pdf",
+        "projectIdRaw": "06367 D - G",
+        "page": 23
+      },
+      "geometryResolution": {
+        "method": "verified_endpoints_straight_line",
+        "isApproximation": true,
+        "featureIds": ["node/fixture-jasper", "node/fixture-okatie"]
+      },
+      "evidence": {
+        "level": "MEDIUM",
+        "score": 80,
+        "reasons": ["Fixture record only; no live OSM resolution"]
+      }
+    },
+    {
+      "id": "GPC-20277",
+      "utility": "GPC",
+      "projectName": "SAV: MCINTOSH - PURRYSBURG 230KV REACTORS",
+      "projectType": "reactor",
+      "voltageKv": [230],
+      "endpoints": [
+        {"name": "McIntosh", "role": "single"}
+      ],
+      "constructionWindow": {
+        "startDate": "2024-01-01",
+        "endDate": "2026-06-01"
+      },
+      "source": {
+        "document": "2025 IRP Volume 3 PUBLIC DISCLOSURE.pdf",
+        "projectIdRaw": "20277",
+        "page": 227
+      },
+      "evidence": {
+        "level": "LOW",
+        "score": 45,
+        "reasons": ["Fixture record only; geometry unresolved"]
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "REL-DESC-06367-D-G-GPC-20277",
+      "projectA": "DESC-06367-D-G",
+      "projectB": "GPC-20277",
+      "distanceKm": 4.7,
+      "closestPoints": [
+        {"lat": 32.3, "lon": -80.9},
+        {"lat": 32.32, "lon": -80.87}
+      ],
+      "spatialTier": "SITE_LOGISTICS",
+      "timeline": {
+        "type": "IN_SERVICE_GAP",
+        "gapDays": 213,
+        "relevance": "MEANINGFUL",
+        "isdWithinFiledSpan": true
+      },
+      "opportunityPriority": "MEDIUM",
+      "coordinationPlaybook": ["staging_yards", "deliveries"],
+      "evidence": {
+        "level": "LOW",
+        "score": 45,
+        "reasons": ["Fixture relationship"]
+      }
+    }
+  ],
+  "zones": [
+    {
+      "id": "ZONE-FIXTURE-01",
+      "name": "Fixture coordination zone",
+      "projectIds": ["DESC-06367-D-G", "GPC-20277"],
+      "relationshipIds": ["REL-DESC-06367-D-G-GPC-20277"],
+      "utilities": ["DESC", "GPC"],
+      "closestDistanceKm": 4.7,
+      "opportunityPriority": "MEDIUM",
+      "evidenceLevel": "LOW",
+      "coordinationThemes": ["site_logistics"],
+      "bounds": {
+        "west": -80.9,
+        "south": 32.3,
+        "east": -80.87,
+        "north": 32.32
+      }
+    }
+  ]
+}
+

@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 from typing import Sequence
 
+from .contract import export_contract, validate_payload
 from .settings.loader import ConfigError, load_settings
 
 
@@ -24,6 +25,9 @@ def build_parser() -> argparse.ArgumentParser:
     commands = parser.add_subparsers(dest="command", required=True)
     config_parser = commands.add_parser("config", help="inspect resolved configuration")
     config_parser.add_argument("action", choices=["show"])
+    contract_parser = commands.add_parser("contract", help="export or validate the API contract")
+    contract_parser.add_argument("action", choices=["export", "validate"])
+    contract_parser.add_argument("payload", type=Path, nargs="?")
     return parser
 
 
@@ -36,6 +40,23 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"Configuration error: {error}")
             return 2
         print(json.dumps(bundle.summary(), indent=2, sort_keys=True))
+        return 0
+    if args.command == "contract" and args.action == "export":
+        repository_root = Path(__file__).resolve().parents[3]
+        schema_path, types_path = export_contract(repository_root)
+        print(f"Wrote {schema_path}")
+        print(f"Wrote {types_path}")
+        return 0
+    if args.command == "contract" and args.action == "validate":
+        if args.payload is None:
+            print("contract validate requires a payload path")
+            return 2
+        try:
+            validate_payload(args.payload)
+        except (OSError, ValueError) as error:
+            print(f"Contract validation error: {error}")
+            return 2
+        print(f"Valid: {args.payload}")
         return 0
     return 2
 

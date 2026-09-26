@@ -1,0 +1,125 @@
+project_id,project_name,warnings
+DESC-6807-B,Queensboro - Ft Johnson 115 kV & Queensboro-Bayfront 115kV (Queensboro-James Island Sect),No public OSM substation candidate for endpoint Queensboro | No public OSM substation candidate for endpoint Ft Johnson
+DESC-0167C-D,Union Pier 115-13.8 kV Sub: Tap,
+DESC-0139-M-N,"Okatie 230-115kV Substation, Jasper – Yemassee 230kV #1 Fold-in","No public OSM substation candidate for endpoint Okatie 230-115kV Substation, Jasper | No public OSM substation candidate for endpoint Yemassee"
+DESC-6808-J,Eastover - Square D 115kV: Rebuild,No public OSM substation candidate for endpoint Eastover | No public OSM substation candidate for endpoint Square D
+DESC-6808-K,Burton-St Helena 115kV: Rebuild Burton-Frogmore Transmission Section,
+DESC-6808-L,Burton-St Helena 115kV: Frogmore Distribution - St Helena,
+DESC-6808-N-O,VCS1-Denny Terrace 230kV & VCS1-Pineland 230kV: Rebuild Single Circuit Sections,
+DESC-6808-R,Wateree-Killian 230kV: Rebuild,
+DESC-6808-S,Okatie-Bluffton 115kV: Rebuild,
+DESC-6808-U,Hopkins-CIP 230kV: Rebuild,
+DESC-6808-V,Faber Place-Bayfront 115kV: Rebuild North Bridge Terrace to Bayfront Section,
+DESC-6808-W,Square D - Hopkins 115kV: Rebuild,No public OSM substation candidate for endpoint Square D | No public OSM substation candidate for endpoint Hopkins
+DESC-6809-E,Stevens Creek - Hooks 115kV/LR Plumb Branch 46kV Rebuilds,No public OSM substation candidate for endpoint Stevens Creek | No public OSM substation candidate for endpoint Hooks
+DESC-6809-G,Stevens Creek - Hooks 115kV/LR Plumb Branch 46kV,No public OSM substation candidate for endpoint Stevens Creek | No public OSM substation candidate for endpoint Hooks
+DESC-6805-G,"Edenwood Sub: #1 & #2 230-115kV Autobanks, Replace with 336MVA",
+DESC-1060A-I-L,"Williams St Sub: Replace Sw House & Relays, AM Williams Sub: Replace Sw House, and McMeekin Sub: Add Sw House",
+DESC-06005-B,Harleyville 115KV Transmission Tap – Construct (1.4 miles),
+DESC-05004-P,Summerville: Replace and Spare 230-115kV 336MVA Auto Bank,
+DESC-06076A,Canadys-Ritter 115KV-Rebld SPDC 230/115KV 1272 (Approx 18 Miles),
+DESC-6359,Yemassee– Ritter 230kV #1 & #2: Construct SPDC with B-1272,
+DESC-06367-A-C-H,Riverport Tap: Construct Tap,
+DESC-06371-D,Wagener 115kV Tap: Construct Tap,
+DESC-06810-F,VCS2-Ward 230kV: Rebuild Line,
+DESC-06810-G,Goose Creek Reservoir: Rebuild Transmission Line Crossings,
+DESC-06810-H,Summerville 115kV Loop: Rebuild,
+DESC-5392-A-C,Coit – Gills Creek 115kV: Construct,No public OSM substation candidate for endpoint Coit | No public OSM substation candidate for endpoint Gills Creek
+DESC-6810-A,Hooks - Thurmond 115kV Tie: Rebuild,No public OSM substation candidate for endpoint Hooks | No public OSM substation candidate for endpoint Thurmond
+DESC-6853-B-F,Scout 230 kV Sub and Fold-in: Construct,
+DESC-6859,Dawson 230kV Sub and Fold-in: Construct and Rebuild,
+DESC-6388-A,Williams-Summerville 230kV: Upgrade to SPDC B1272 ACSR,
+DESC-0147-C-K,Cainhoy 115 kV Tap: Construct,
+DESC-0147-B-J,Jack Primus 115 kV Tap: Construct,
+DESC-6810-O,Urquhart – Aiken PSA 46 kV: Rebuild,No public OSM substation candidate for endpoint Urquhart | No public OSM substation candidate for endpoint Aiken PSA
+DESC-6810-T,Cameron Jct – Cameron – St Matthews 46 kV Rebuild,No public OSM substation candidate for endpoint Cameron Jct | No public OSM substation candidate for endpoint Cameron – St Matthews
+GPC-10478,CORNELIA - TALLULAH LODGE 115KV REBUILD,No public OSM substation candidate for endpoint CORNELIA | No public OSM substation candidate for endpoint TALLULAH LODGE
+GPC-10811,BOWEN #10 500/230KV AUTOBANK REPLACEMENT,
+GPC-13166,FIRST AVENUE - NORTH COLUMBUS 115KV LINE REBUILD,No public OSM substation candidate for endpoint FIRST AVENUE | No public OSM substation candidate for endpoint NORTH COLUMBUS
+GPC-14222,THOMSON PRIMARY 230/115KV SECOND TRANSFORMER,
+GPC-16007,FENWICK STREET - SAND BAR FERRY 115KV (RECONDUCTOR/REBUILD),No public OSM substation candidate for endpoint FENWICK STREET | No public OSM substation candidate for endpoint SAND BAR FERRY
+GPC-17075,SAV: LITTLE OGEECHEE 230-115KV: RELAY MODERNIZATION,
+GPC-17900,UNION CITY - YATES 230 KV WHITE LINE REBUILD,No public OSM substation candidate for endpoint UNION CITY | No public OSM substation candidate for endpoint YATES
+GPC-18492,MITCHELL - NORTH TIFTON 230KV RECONDUCTOR,No public OSM substation candidate for endpoint MITCHELL | No public OSM substation candidate for endpoint NORTH TIFTON
+GPC-18573,GRID - ARKWRIGHT - LLOYD SHOALS 115KV,No public OSM substation candidate for endpoint GRID | No public OSM substation candidate for endpoint ARKWRIGHT - LLOYD SHOALS
+GPC-18690,PALMYRA REACTOR REMOVAL,
+GPC-18736,CC - MICROSOFT - SHUGART (CCO06),No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint MICROSOFT - SHUGART (CCO06)
+GPC-18800,ECHECONNEE-WELLSTON 115KV REBUILD,
+GPC-18848,"BAINBRIDGE TRANSMISSION: EAST RIVER ROAD, EAST BAINBRIDGE",
+GPC-18889,JEFFERSON STREET#3 - NORTHWEST (WHITE) 115 KV RECONDUCTOR,No public OSM substation candidate for endpoint JEFFERSON STREET#3 | No public OSM substation candidate for endpoint NORTHWEST (WHITE)
+GPC-19187,GRID - BREMEN - CROOKED CREEK (APC) 115 KV PROJECT,No public OSM substation candidate for endpoint GRID | No public OSM substation candidate for endpoint BREMEN - CROOKED CREEK (APC)
+GPC-19287,GRADY-WEST END 115KV REBUILD,
+GPC-19523,SAV: CC - HYUNDAI MOTORS SAVANNAH AKA. PROJECT EA,No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint HYUNDAI MOTORS SAVANNAH AKA.
+GPC-19597,ADAMSVILLE - BUZZARD ROOST 230KV REBUILD AND JUMPER UPGRADE,No public OSM substation candidate for endpoint ADAMSVILLE | No public OSM substation candidate for endpoint BUZZARD ROOST
+GPC-19618,GORDON-N DUBLIN 115KV (GORDON-ENGL MCI J) REBUILD,
+GPC-19626,GLENWOOD SPRINGS 115KV CAP BANK,
+GPC-19627,ECHECONNEE-WELLSTON 115KV LINE REBUILD,
+GPC-19631,PINE GROVE PRIMARY 115 KV DUAL STAGE CAPACITOR BANK,
+GPC-19676,ADAMSVILLE - JACK MCDONOUGH 230KV LINE REBUILD,No public OSM substation candidate for endpoint ADAMSVILLE | No public OSM substation candidate for endpoint JACK MCDONOUGH
+GPC-19706,GRID - GAINESVILLE #2 EQUIPMENT REPLACEMENT,No public OSM substation candidate for endpoint GRID | No public OSM substation candidate for endpoint GAINESVILLE #2 EQUIPMENT REPLACEMENT
+GPC-19966,SAV: CC - BIG OGEECHEE 500/230KV (CC NETWORK IMPROVEMENTS),No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint BIG OGEECHEE 500/230KV (CC NETWORK IMPROVEMENTS)
+GPC-19996,GOLDENS CREEK - WARRENTON PRIMARY 230KV REBUILD,No public OSM substation candidate for endpoint GOLDENS CREEK | Ambiguous OSM candidates for endpoint WARRENTON PRIMARY
+GPC-19997,AULTMAN ROAD-PERRY 115KV LINE REBUILD,
+GPC-20018,CC - QTS FAYETTEVILLE TRANSMISSION NEEDS,No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint QTS FAYETTEVILLE TRANSMISSION NEEDS
+GPC-20024,DYER ROAD - EAST ROANOKE 115KV (REBUILD),No public OSM substation candidate for endpoint DYER ROAD | No public OSM substation candidate for endpoint EAST ROANOKE
+GPC-20150,CC - HILL VIEW & GRASSY HOLLOW SUB - CC IMPROVEMENTS,No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint HILL VIEW & GRASSY HOLLOW SUB - CC IMPROVEMENTS
+GPC-20151,CC - CASS PINE 230/25 NEW SUB - QCELLS - CC IMPROVEMENTS,No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint CASS PINE 230/25 NEW SUB - QCELLS - CC IMPROVEMENTS
+GPC-20152,CC - CASS PINE- HILL VIEW 230 KV LINE- CC IMPROVEMENTS,No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint CASS PINE- HILL VIEW
+GPC-20160,THOMASTON 230 NEW BUILD SUB,
+GPC-20175,CC - PROJECT CHRONOS- SK/HYUNDAI,No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint PROJECT CHRONOS- SK/HYUNDAI
+GPC-20216,CC - STONEWALL TELL ROAD (TA REALTY),No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint STONEWALL TELL ROAD (TA REALTY)
+GPC-20223,CC - PROJECT PAYTON BAINBRIDGE,No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint PROJECT PAYTON BAINBRIDGE
+GPC-20243,CC - GARRETT ROAD SWITCHING STATION - TRAE LANE,No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint GARRETT ROAD SWITCHING STATION - TRAE LANE
+GPC-20274,UNION CITY - YATES 230KV (BLACK) LINE REBUILD,No public OSM substation candidate for endpoint UNION CITY | No public OSM substation candidate for endpoint YATES
+GPC-20285,LOWER RIVER - WEBB (APC) 115KV RECONDUCTOR,No public OSM substation candidate for endpoint LOWER RIVER | No public OSM substation candidate for endpoint WEBB (APC)
+GPC-20300,MORROW 115KV RELAY UPGRADE,
+GPC-20326,ANTHONY SHOALS STATCOM SYSTEM,
+GPC-20428,GORDON-SANDERSVILLE #1 115KV LINE REBUILD (DEEPSTEP-SAND #6),
+GPC-20431,VILLA RICA LOW SIDE BREAKER,
+GPC-20464,NORCROSS 230KV BUS 1-3 SERIES BUS TIE BREAKER INSTALLATION,
+GPC-20466,SMART VALVE INSTALLATION,
+GPC-20474,GRADY 230/115KV RELAY MODERNIZATION,
+GPC-20480,EAST POINT - UNION CITY 230KV BLACK LINE RECONDUCTOR,No public OSM substation candidate for endpoint EAST POINT | No public OSM substation candidate for endpoint UNION CITY
+GPC-20482,PITTMAN ROAD - WEST POINT DAM (USA) 115KV REBUILD,No public OSM substation candidate for endpoint PITTMAN ROAD | No public OSM substation candidate for endpoint WEST POINT DAM (USA)
+GPC-20489,SCOTTDALE RELAY MODERNIZATION,
+GPC-20490,KLONDIKE RELAY MODERNIZATION,
+GPC-20491,EAST POINT RELAY MODERNIZATION,
+GPC-20509,CC - EMBLEM RIVERSIDE CUSTOMER SUB (FLEXENTIAL),No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint EMBLEM RIVERSIDE CUSTOMER SUB (FLEXENTIAL)
+GPC-20512,KATHLEEN AREA IMPROVEMENTS,
+GPC-20516,"GOAT ROCK 230KV SWITCH, JUMPER, & LINE TRAP REPLACEMENT",
+GPC-20656,PLANT YATES BREAKER AND HALF STATION,
+GPC-20668,DRESDEN LINE PROTECTIVE RELAYING,
+GPC-20684,CAMDEN INDUSTRIAL PARK (GPC),
+GPC-20690,EAST POINT - UNION CITY (WHITE) 230KV REBUILD,No public OSM substation candidate for endpoint EAST POINT | No public OSM substation candidate for endpoint UNION CITY (WHITE)
+GPC-20691,UNION CITY - YATES 230KV (WHITE) SWITCH AND TRAP REPLACEMENT,No public OSM substation candidate for endpoint UNION CITY | No public OSM substation candidate for endpoint YATES
+GPC-20717,CC - TOMOCHICHI 500/230KV SOLUTION (CC NETWORK IMPROVEMENTS),No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint TOMOCHICHI 500/230KV SOLUTION (CC NETWORK IMPROVEMENTS)
+GPC-20736,CC - TA REALTY ELLENWOOD NETWORK IMPROVEMENTS,No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint TA REALTY ELLENWOOD NETWORK IMPROVEMENTS
+GPC-20759,WINDER PRIMARY 230KV BUS 1-2 PARALLEL BUS-TIE INSTALLATION,
+GPC-20761,ATKINSON - NORTHWEST 115KV REBUILD,No public OSM substation candidate for endpoint ATKINSON | No public OSM substation candidate for endpoint NORTHWEST
+GPC-20764,ATKINSON - NORTHSIDE DRIVE 115KV REBUILD,No public OSM substation candidate for endpoint ATKINSON | No public OSM substation candidate for endpoint NORTHSIDE DRIVE
+GPC-20767,ARKWRIGHT BUS AND JUMPER REPLACEMENT,
+GPC-20768,SOUTH MACON 115KV BUSES 1 & 2 REPLACEMENT,
+GPC-20771,CC - GULLATT ROAD TRANSMISSION IMPROVEMENTS,No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint GULLATT ROAD TRANSMISSION IMPROVEMENTS
+GPC-20774,CC - VILLA RICA UPGRADES (CC NETWORK IMPROVEMENTS),No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint VILLA RICA UPGRADES (CC NETWORK IMPROVEMENTS)
+GPC-20777,JACK MCDONOUGH - NORTHWEST (BLACK) 230KV RECONDUCTOR,No public OSM substation candidate for endpoint JACK MCDONOUGH | No public OSM substation candidate for endpoint NORTHWEST (BLACK)
+GPC-20781,CC - SUMMER LAKE - VILLA RICA 230KV REBUILD (CC IMPROVEMENT),No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint SUMMER LAKE - VILLA RICA
+GPC-20787,SAV: LITTLE OGEECHEE 230/115KV BANK REPLACEMENT,
+GPC-20796,SAV: MELDRIM BANK D REPLACEMENT,
+GPC-20797,CC - EAST VILLA RICA AREA SWITCHING STATION (CC IMPROVEMENT),No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint EAST VILLA RICA AREA SWITCHING STATION (CC IMPROVEMENT)
+GPC-20857,NEW CAVENDER DRIVE - TRIBUTARY 230KV LINE,No public OSM substation candidate for endpoint NEW CAVENDER DRIVE | No public OSM substation candidate for endpoint TRIBUTARY
+GPC-20989,SAV: RICE HOPE NEW AUTO TRANSFORMER,
+GPC-21022,OHARA BREAKER REPLACEMENT,
+GPC-21036,BUZZARD ROOST - FACTORY SHOALS 230KV NEW LINE,No public OSM substation candidate for endpoint BUZZARD ROOST | No public OSM substation candidate for endpoint FACTORY SHOALS
+GPC-21046,THALMANN AND COLERAIN 23O KV LINE RELAY PANEL UPGRADES,
+GPC-21047,BROADWAY - ECHECONNEE 115 KV LINE REBUILD,No public OSM substation candidate for endpoint BROADWAY | No public OSM substation candidate for endpoint ECHECONNEE
+GPC-21062,ASHLEY PARK-WANSLEY 500KV,
+GPC-21063,FARLEY (APC)-TAZEWELL 500KV,
+GPC-21069,SMART VALVES AT EAST VILLA RICA SWITCHING STATION,
+GPC-21093,NORTH SPA 230KV STRATEGIC PROJECT,
+GPC-21097,EAST POINT - TRIBUTARY 230KV REBUILD,No public OSM substation candidate for endpoint EAST POINT | No public OSM substation candidate for endpoint TRIBUTARY
+GPC-21098,TRIBUTARY - THORNTON RD 230KV REBUILD,No public OSM substation candidate for endpoint TRIBUTARY | No public OSM substation candidate for endpoint THORNTON RD
+GPC-21116,GOSHEN AREA STRATEGIC SOLUTION,
+GPC-21128,GOAT ROCK REACTORS INSTALLATION,
+GPC-21130,CC - NORTH GEORGIA DATA NETWORK UPGRADES,No public OSM substation candidate for endpoint CC | No public OSM substation candidate for endpoint NORTH GEORGIA DATA NETWORK UPGRADES
+GPC-21138,GLENWOOD SPRINGS - PORTERDALE PRIMARY 230KV LINE SWITCH REPL,No public OSM substation candidate for endpoint GLENWOOD SPRINGS | No public OSM substation candidate for endpoint PORTERDALE PRIMARY
+GPC-21141,LLOYD SHOALS - PORTERDALE PRIMARY 115KV REBUILD,No public OSM substation candidate for endpoint LLOYD SHOALS | No public OSM substation candidate for endpoint PORTERDALE PRIMARY

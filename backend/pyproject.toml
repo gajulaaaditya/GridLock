@@ -11,7 +11,10 @@ dependencies = [
   "httpx>=0.28.1",
   "pydantic>=2.10,<3",
   "pypdf>=6.19.0",
+  "pyproj>=3.8.0",
   "PyYAML>=6.0,<7",
+  "rapidfuzz>=3.14.6",
+  "shapely>=2.1.2",
 ]
 
 [project.scripts]

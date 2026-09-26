@@ -46,7 +46,7 @@ def infer_project_type(name: str, description: str | None) -> ProjectType:
 def extract_endpoints(name: str) -> list[Endpoint]:
     """Extract only explicit, separator-delimited endpoints; ambiguous titles stay empty."""
     clean_name = re.sub(r"^(?:[A-Z]{2,5}:\s*)", "", name.strip())
-    clean_name = re.sub(r"\s+\d{2,3}\s*K[Vv].*$", "", clean_name).strip()
+    clean_name = re.sub(r"\s+\d{2,3}\s*[Kk][Vv].*$", "", clean_name).strip()
     parts = re.split(r"\s+[–-]\s+", clean_name, maxsplit=1)
     if len(parts) != 2 or not all(parts):
         return []

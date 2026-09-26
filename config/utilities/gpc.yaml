@@ -2,7 +2,7 @@ id: gpc
 display_name: Georgia Power
 color: "#F9A825"
 states: [GA, SC]
-operator_aliases: []
+operator_aliases: [Georgia Power]
 included_sponsors: [GPC, SAV]
 sources:
   - id: gpc_irp_ten_year

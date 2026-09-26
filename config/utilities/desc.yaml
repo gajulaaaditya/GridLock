@@ -2,11 +2,10 @@ id: desc
 display_name: Dominion Energy South Carolina
 color: "#1976D2"
 states: [SC]
-operator_aliases: []
+operator_aliases: [Dominion Energy South Carolina]
 sources:
   - id: desc_project_descriptions
     parser: desc_project_descriptions
     path: 2024-2028-2million-and-above-project-descriptions.pdf
     page_start: 1
     page_end: 44
-

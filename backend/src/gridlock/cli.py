@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Sequence
 
 from .contract import export_contract, validate_payload
+from .georesolution import resolve_projects
 from .ingestion.documents import IngestionError, ingest_plans
 from .ingestion.osm import ingest_osm
 from .ingestion.osm.cache import OsmIngestionError
@@ -34,6 +35,7 @@ def build_parser() -> argparse.ArgumentParser:
     ingest_parser = commands.add_parser("ingest", help="ingest configured public sources")
     ingest_parser.add_argument("source", choices=["plans", "osm"])
     ingest_parser.add_argument("--offline", action="store_true")
+    commands.add_parser("resolve", help="resolve projects to public OSM geometry")
     return parser
 
 
@@ -79,6 +81,15 @@ def main(argv: Sequence[str] | None = None) -> int:
             report = ingest_osm(bundle, Path(__file__).resolve().parents[3], offline=args.offline)
         except (ConfigError, OsmIngestionError) as error:
             print(f"OSM ingestion error: {error}")
+            return 2
+        print(json.dumps(report.as_dict(), indent=2, sort_keys=True))
+        return 0
+    if args.command == "resolve":
+        try:
+            bundle = load_settings(args.config)
+            report = resolve_projects(bundle, Path(__file__).resolve().parents[3])
+        except (ConfigError, OSError, ValueError) as error:
+            print(f"Resolution error: {error}")
             return 2
         print(json.dumps(report.as_dict(), indent=2, sort_keys=True))
         return 0
